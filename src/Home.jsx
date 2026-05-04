@@ -7,7 +7,6 @@ import { NavLink ,Link} from "react-router-dom";
 export default function Home() {
      const { articles , categories } = useOutletContext();
      const featuredArticles =articles.filter(article => article.featured === true);
-    
      const newArticles = [...articles].sort((art1, art2) => new Date(art2.date) - new Date(art1.date)).slice(0,3);
      
      
@@ -76,7 +75,7 @@ export default function Home() {
         </div>
 
      </section>
-     <section className='contact'>
+     <section className='subscribe' >
         <div className="container mx-auto my-20 ">
             <div className='bg-zinc-800 rounded-xl border-1 border-white/50 py-10  flex flex-col gap-5 justify-center items-center md:w-3/4 w-full mx-auto'>
               <div className="size-20 rounded-xl flex justify-center items-center bg-orange-500 fs-20">
